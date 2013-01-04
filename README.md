@@ -27,7 +27,7 @@ Installation
 Usage
 =====
 
-All thre modal dialogs are implemented as global jQuery methods.
+All three modal dialogs are implemented as global jQuery methods.
 
 Alert
 -----
