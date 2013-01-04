@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html lang="lv"> 
+<head> 
+	<meta charset="utf-8">
+	<title>jQuery UI Modals</title>
+	<meta http-equiv="Content-Language" content="lv" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Lang" content="lv">
+	<meta name="copyright" content="">
+	<meta name="author" content="">  
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" media="screen, projection">
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="jquery.ui.modals.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#alert').click(function(e){
+				$.alert({
+					title: 'Test Alert',
+					body: 'This is an alert!',
+					ok: {
+						text: 'OK?',
+						callback: function(){
+							console.log('ok');
+						}
+					}
+				})
+			});
+			$('#confirm').click(function(e){
+				$.confirm({
+					title: 'Test Confirm',
+					body: 'Do you agree?',
+					ok: {
+						text: 'Yes',
+						callback: function(){
+							$('#confirm-result').empty().append('yes');
+						}
+					},
+					cancel: {
+						text: 'No',
+						callback: function(){
+							$('#confirm-result').empty().append('no');
+						}
+					}
+				})
+			});
+			$('#prompt').click(function(e){
+				$.prompt({
+					title: 'Test Alert',
+					body: 'Write something',
+					ok: {
+						text: 'OK',
+						callback: function(val){
+							$('#prompt-result').empty().append(val);
+						}
+					},
+					cancel: {
+						text: 'Cancel',
+						callback: function(){
+							$('#prompt-result').empty().append('');
+						}
+					}
+				})
+			});
+		});
+	</script>
+</head>
+<body>
+	<button id="alert">Alert</button>
+	<button id="confirm">Confirm</button>
+	<span id="confirm-result"></span>
+	<button id="prompt">Prompt</button>
+	<span id="prompt-result"></span>
+</body>
+</html>
