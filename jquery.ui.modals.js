@@ -45,6 +45,10 @@
 					modal: true,
 					minWidth: 300,
 					minHeight: 150,
+					maxWidth: 960,
+					maxHeight: 600,
+					width: 'auto',
+					height: 'auto',
 					title: opt['title'],
 					resizable: false,
 					buttons: [ {
@@ -99,6 +103,10 @@
 					modal: true,
 					minWidth: 300,
 					minHeight: 150,
+					maxHeight: 600,
+					maxWidth: 960,
+					width: 'auto',
+					height: 'auto',
 					title: opt['title'],
 					resizable: false,
 					buttons: [ {
@@ -165,6 +173,10 @@
 					modal: true,
 					minWidth: 300,
 					minHeight: 150,
+					maxWidth: 960,
+					maxHeight: 600,
+					width: 'auto',
+					height: 'auto',
 					title: opt['title'],
 					resizable: false,
 					buttons: [ {
